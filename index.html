@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>玻眼 · 玻璃瓶残余应力视觉质检</title>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">偏光</div>
+          <div>
+            <strong>玻眼 StressVision</strong>
+            <span>双偏光片 · 等色线分析</span>
+          </div>
+        </div>
+        <nav class="nav" aria-label="主导航">
+          <button class="nav-btn" data-route="calibration"><span>01</span>拍摄校准</button>
+          <button class="nav-btn" data-route="bottle"><span>02</span>单瓶应力</button>
+          <button class="nav-btn" data-route="molds"><span>03</span>模具统计</button>
+          <button class="nav-btn" data-route="report"><span>04</span>质检报告</button>
+        </nav>
+        <div class="sidebar-foot">
+          <label class="mini-label">标准表</label>
+          <select id="standardSelect" class="input"></select>
+          <div id="workerStatus" class="worker-status">Web Worker 就绪中…</div>
+          <div class="meta-line">OPD 目标 ≤ 10 nm · 10 瓶/s</div>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1 id="pageTitle">拍摄校准</h1>
+            <p id="pageSubtitle">暗场/平场、有色玻璃补偿、应力光学系数与光程差校验</p>
+          </div>
+          <div class="topbar-actions">
+            <span id="clock" class="clock"></span>
+            <button id="quickDemo" class="btn primary">合成并分析样瓶</button>
+          </div>
+        </header>
+        <section id="page" class="page" aria-live="polite"></section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
